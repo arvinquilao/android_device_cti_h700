@@ -6,3 +6,4 @@
 /external_sd	vfat      /dev/block/mmcblk1p1        /dev/block/mmcblk1	flags=display="Micro SDcard";storage;wipeingui;removable
 /system		ext4      /dev/block/mmcblk0p12
 /sdcard		vfat      /dev/block/mmcblk0p21					flags=display="internal SD";storage;wipeingui;
+/splash		emmc      /dev/block/mmcblk0p20					flags=display=Splash;backup=1
