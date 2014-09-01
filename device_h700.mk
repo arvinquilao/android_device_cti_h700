@@ -5,7 +5,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/cti/h700/h700-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/cti/h700/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 LOCAL_PATH := device/cti/h700
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -16,28 +16,27 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/cti/h700/twrp.fstab:recovery/root/etc/twrp.fstab
-
-PRODUCT_COPY_FILES += \
-device/cti/h700/rootdir/fstab.qcom:root/fstab.qcom \
-device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
-device/cti/h700/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
-device/cti/h700/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
-device/cti/h700/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
-device/cti/h700/rootdir/init.qcom.sh:root/init.qcom.sh \
-device/cti/h700/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
-device/cti/h700/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-device/cti/h700/rootdir/init.target.rc:root/init.target.rc \
-device/cti/h700/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
-device/cti/h700/rootdir/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
-device/cti/h700/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-device/cti/h700/rootdir/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-device/cti/h700/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
-device/cti/h700/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+    
+#PRODUCT_COPY_FILES += \
+#device/cti/h700/rootdir/fstab.qcom:root/fstab.qcom \
+#device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+#device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
+#device/cti/h700/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
+#device/cti/h700/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
+#device/cti/h700/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+#device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+#device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
+#device/cti/h700/rootdir/init.qcom.sh:root/init.qcom.sh \
+#device/cti/h700/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
+#device/cti/h700/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
+#device/cti/h700/rootdir/init.target.rc:root/init.target.rc \
+#device/cti/h700/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+#device/cti/h700/rootdir/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
+#device/cti/h700/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+#device/cti/h700/rootdir/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
+#device/cti/h700/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+#device/cti/h700/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+#device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
@@ -61,26 +60,26 @@ device/cti/h700/thermal-engine-8610.conf:system/etc/thermal-engine-8610.conf \
 device/cti/h700/xtwifi.conf:system/etc/xtwifi.conf \
 device/cti/h700/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
-#PRODUCT_COPY_FILES += \
-#device/cti/h700/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
-#device/cti/h700/modules/coresight-event.ko:system/lib/modules/coresight-event.ko \
-#device/cti/h700/modules/dma_test.ko:system/lib/modules/dma_test.ko \
-#device/cti/h700/modules/evbug.ko:system/lib/modules/evbug.ko \
-#device/cti/h700/modules/gpio_axis.ko:system/lib/modules/gpio_axis.ko \
-#device/cti/h700/modules/gpio_event.ko:system/lib/modules/gpio_event.ko \
-#device/cti/h700/modules/gpio_input.ko:system/lib/modules/gpio_input.ko \
-#device/cti/h700/modules/gpio_matrix.ko:system/lib/modules/gpio_matrix.ko \
-#device/cti/h700/modules/gpio_output.ko:system/lib/modules/gpio_output.ko \
-#device/cti/h700/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
-#device/cti/h700/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
-#device/cti/h700/modules/oprofile.ko:system/lib/modules/oprofile.ko \
-#device/cti/h700/modules/qcedev.ko:system/lib/modules/qcedev.ko \
-#device/cti/h700/modules/qcrypto.ko:system/lib/modules/qcrypto.ko \
-#device/cti/h700/modules/radio-iris-transport.ko:system/lib/modules/radio-iris-transport.ko \
-#device/cti/h700/modules/reset_modem.ko:system/lib/modules/reset_modem.ko \
-#device/cti/h700/modules/spidev.ko:system/lib/modules/spidev.ko \
-#device/cti/h700/modules/wlan.ko:system/lib/modules/wlan.ko \
-#device/cti/h700/modules/pronto/pronto_wlan.ko:system/lib/modules/pronto/pronto_wlan.ko
+PRODUCT_COPY_FILES += \
+device/cti/h700/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
+device/cti/h700/modules/coresight-event.ko:system/lib/modules/coresight-event.ko \
+device/cti/h700/modules/dma_test.ko:system/lib/modules/dma_test.ko \
+device/cti/h700/modules/evbug.ko:system/lib/modules/evbug.ko \
+device/cti/h700/modules/gpio_axis.ko:system/lib/modules/gpio_axis.ko \
+device/cti/h700/modules/gpio_event.ko:system/lib/modules/gpio_event.ko \
+device/cti/h700/modules/gpio_input.ko:system/lib/modules/gpio_input.ko \
+device/cti/h700/modules/gpio_matrix.ko:system/lib/modules/gpio_matrix.ko \
+device/cti/h700/modules/gpio_output.ko:system/lib/modules/gpio_output.ko \
+device/cti/h700/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
+device/cti/h700/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
+device/cti/h700/modules/oprofile.ko:system/lib/modules/oprofile.ko \
+device/cti/h700/modules/qcedev.ko:system/lib/modules/qcedev.ko \
+device/cti/h700/modules/qcrypto.ko:system/lib/modules/qcrypto.ko \
+device/cti/h700/modules/radio-iris-transport.ko:system/lib/modules/radio-iris-transport.ko \
+device/cti/h700/modules/reset_modem.ko:system/lib/modules/reset_modem.ko \
+device/cti/h700/modules/spidev.ko:system/lib/modules/spidev.ko \
+device/cti/h700/modules/wlan.ko:system/lib/modules/wlan.ko \
+device/cti/h700/modules/pronto/pronto_wlan.ko:system/lib/modules/pronto/pronto_wlan.ko
 
 
 # These are the hardware-specific features
