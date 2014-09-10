@@ -17,26 +17,26 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     
-#PRODUCT_COPY_FILES += \
-#device/cti/h700/rootdir/fstab.qcom:root/fstab.qcom \
-#device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-#device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
-#device/cti/h700/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
-#device/cti/h700/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
-#device/cti/h700/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-#device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-#device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
-#device/cti/h700/rootdir/init.qcom.sh:root/init.qcom.sh \
-#device/cti/h700/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
-#device/cti/h700/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-#device/cti/h700/rootdir/init.target.rc:root/init.target.rc \
-#device/cti/h700/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
-#device/cti/h700/rootdir/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
-#device/cti/h700/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-#device/cti/h700/rootdir/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-#device/cti/h700/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
-#device/cti/h700/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-#device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+PRODUCT_COPY_FILES += \
+device/cti/h700/rootdir/fstab.qcom:root/fstab.qcom \
+device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
+device/cti/h700/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
+device/cti/h700/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
+device/cti/h700/rootdir/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+device/cti/h700/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
+device/cti/h700/rootdir/init.qcom.rc:root/init.qcom.rc \
+device/cti/h700/rootdir/init.qcom.sh:root/init.qcom.sh \
+device/cti/h700/rootdir/init.qcom.ssr.sh:root/init.qcom.ssr.sh \
+device/cti/h700/rootdir/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
+device/cti/h700/rootdir/init.target.rc:root/init.target.rc \
+device/cti/h700/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+device/cti/h700/rootdir/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
+device/cti/h700/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+device/cti/h700/rootdir/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
+device/cti/h700/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+device/cti/h700/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \

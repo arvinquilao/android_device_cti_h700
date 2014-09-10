@@ -25,21 +25,19 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#device 	fstype		mount point		[device2] [length=]
+#device 					  mount point	   fstype  [device2] [length=]
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                    wait
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /datadata           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check
-/dev/block/mmcblk1p1                              /external_sd           vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
-/dev/block/mmcblk1p2                              /sd-ext           auto    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
-/dev/block/platform/msm_sdcc.1/by-name/usbmsc       /sdcard           vfat    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
+/dev/block/mmcblk1p1   	    			    /external_sd    vfat    defaults                                			    defaults
+/dev/block/mmcblk1p2   	    			    /sd-ext  	    auto    defaults                                			    defaults
+/dev/block/platform/msm_sdcc.1/by-name/usbmsc       /emmc      	    vfat    defaults                               			    defaults
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/misc         /misc           emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/splash       /splash         emmc    defaults                                                        defaults
-
-/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware	    emmc		defaults                                                     defaults
-/dev/block/platform/msm_sdcc.1/by-name/sbl1     /sbl1		        emmc		defaults                                                     defaults
-/dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot		    emmc		defaults                                                     defaults
-/dev/block/platform/msm_sdcc.1/by-name/rpm      /rpm		        emmc		defaults                                                     defaults
-/dev/block/platform/msm_sdcc.1/by-name/tz       /tz		            emmc		defaults                                                     defaults
+/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware	    emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/sbl1         /sbl1	    emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot	    emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/rpm          /rpm	    emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/tz           /tz		    emmc    defaults                                                        defaults
