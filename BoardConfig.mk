@@ -26,10 +26,10 @@ USE_OPENGL_RENDERER := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-# TARGET_KERNEL_CONFIG := h700_defconfig
+# TARGET_KERNEL_CONFIG := msm8610_h700_defconfig
 # TARGET_KERNEL_SOURCE := kernel/qcom/msm/
 BOARD_MKBOOTIMG_ARGS := --dt $(LOCAL_PATH)/dt.img
-# BOARD_KERNEL_SEPARATED_DT := true
+BOARD_KERNEL_SEPARATED_DT := true
 
 
 BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
@@ -59,7 +59,7 @@ BOARD_WLAN_DEVICE := qcwcn
 TARGET_USES_WCNSS_CTRL := true
 
 # Recovery
-# TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true

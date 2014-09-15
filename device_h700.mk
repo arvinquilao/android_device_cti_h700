@@ -36,7 +36,10 @@ device/cti/h700/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
 device/cti/h700/rootdir/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
 device/cti/h700/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
 device/cti/h700/rootdir/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+device/cti/h700/rootdir/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
+device/cti/h700/rootdir/etc/snd_soc_msm/snd_soc_msm_8x10_wcd:system/etc/snd_soc_msm/snd_soc_msm_8x10_wcd \
+device/cti/h700/rootdir/etc/snd_soc_msm/snd_soc_msm_8x10_wcd_skuaa:system/etc/snd_soc_msm/snd_soc_msm_8x10_wcd_skuaa \
+device/cti/h700/rootdir/etc/snd_soc_msm/snd_soc_msm_8x10_wcd_skuab:system/etc/snd_soc_msm/snd_soc_msm_8x10_wcd_skuab 
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
